@@ -11,7 +11,9 @@ const app = express();
   //console.log(" procss.env = ",process.env);
 //console.log("import.meta.env",import.meta.env);
 
+app.get("/", (_, res) => res.send("Hello from  home"));
 app.get("/message", (_, res) => res.send("Hello from  aaagfhhxxx express!"));
+app.get("*", (_, res) => res.send("Hello from  404 404 404"));
 
 ViteExpress.listen(app, 3000, () => console.log("Server is listening..."));
 
